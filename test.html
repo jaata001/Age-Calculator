@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <h2>Age Calculator</h2>
+
+        <div class="birthday">
+            <div class="birthday-box">
+                <label for="birthdate">Fødselsdato:</label>
+                <input type="date" id="birthdate" class="birthday-input">
+            </div>
+        </div>
+
+        <button onclick="calculateAge()">Regn ut din alder</button>
+
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script> 
+<!--     <script>
+        function calculateAge() {
+            const birthdate = document.getElementById('birthdate').value;
+            if (!birthdate) {
+                document.getElementById('result').innerText = "Vennligst velg en fødselsdato.";
+                document.getElementById('result').classList.remove('hidden');
+                return;
+            }
+
+            const birthDateObj = new Date(birthdate);
+            const today = new Date();
+
+            let ageYears = today.getFullYear() - birthDateObj.getFullYear();
+            let ageMonths = today.getMonth() - birthDateObj.getMonth();
+            let ageDays = today.getDate() - birthDateObj.getDate();
+
+            if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
+                ageYears--;
+                ageMonths += 12;
+            }
+
+            if (ageDays < 0) {
+                const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 0);
+                ageDays += lastMonth.getDate();
+                ageMonths--;
+            }
+
+            document.getElementById('result').innerText = `Du er ${ageYears} år, ${ageMonths} måneder og ${ageDays} dager gammel.`;
+            document.getElementById('result').classList.remove('hidden');
+        }
+    </script>
+ -->
+</body>
+</html>
